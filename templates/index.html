@@ -1,0 +1,108 @@
+<body>
+{% extends "_base.html" %}
+
+{% block content %}
+
+
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="titre">Moteur de recherche</h1>
+    <hr>
+    <form action="/search" method="POST" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" name="image">
+          <button type="submit" class="btn btn-primary5">
+            <i class="fas fa-search"> Rechercher</i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <br>
+    
+  </div>
+
+    <div class=" col-md-12 imgsrc"> 
+      <h1 class="imgsource">Image source </h1>
+      <hr>
+    <br>
+    {% if image is defined and image[0] is defined %}
+    <img src="../static/uploads/{{image}}" alt="source Image" width="400" height="300">
+    {% endif%}
+    
+    </div>
+    
+    
+  
+
+  
+
+
+
+</div>
+
+<div class="row1">
+  <div class="col-md-5 col-md-offset-1">
+    <h2 class="result">Couleur</h2>
+    <br>
+    <table class="table" id="results-table" >
+    
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Score</th>
+          </tr>
+          
+
+          {% for item in jsonResult  %}
+          <tr>
+            <td><img src="../static/data/{{item.image}}" width="150" , height="150"></td>
+            <td>{{item.score}}</td>
+          </tr>
+          {% endfor %}
+        
+
+        </thead>
+      
+      
+      <tbody id="results">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-5 col-md-offset-1">
+    <h2 class="result">Texture</h2>
+    <br>
+    <table class="table" id="results-table" >
+    
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Score</th>
+          </tr>
+          
+          
+          {% for item in jsonResult1  %}
+          <tr>
+            <td><img src="../static/data/{{item.image}}" width="150" , height="150"></td>
+            <td>{{item.score}}</td>
+          </tr>
+          {% endfor %}
+        
+
+        </thead>
+      
+      
+      <tbody id="results">
+      </tbody>
+    </table>
+  </div>
+
+</div>
+<br>
+{% endblock %}
+
+</body>
+
+

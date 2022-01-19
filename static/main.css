@@ -1,0 +1,98 @@
+/* custom styles */
+.hey{
+  background-color: rgb(232, 246, 250);
+  
+ 
+ 
+}
+
+.center-container {
+  padding-left: 0px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(10, 38, 97);
+
+
+}
+
+
+
+
+
+
+
+.active {
+  border: 0px solid red;
+}
+
+.result-img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.btn {
+  margin-top: unset;
+  font-style: italic;
+}
+
+.table{
+  color: rgb(10, 38, 97);
+  font-size: 15px;
+  
+}
+
+.titre{
+
+  color: #04153a;
+  text-align: left;
+  padding-bottom: 0px;
+  size: 5px;
+  width: 700px;
+  height:110px;
+  margin-left: 48px;
+  
+
+  background-image: url("logoo.png");
+  background-repeat: no-repeat;
+  
+}
+
+.result{
+  padding-left: 100px;
+ text-align: left; 
+}
+
+.row{
+  
+  background-image: url("wv.png");
+  margin-top: -20px;
+  margin-left: -16%;
+      margin-right: -9.75%;
+      height: 400px;
+
+}
+
+.custom-file-input{
+
+  padding-left: 650px;
+  padding-top: 10px;
+}
+
+.imgsrc{
+  padding-top: 40px;
+}
+
+button{
+  background-color: #23599b;
+  color: white;
+  
+}
+button:hover{
+  background-color:#476bb9 ;
+  color: white;
+}
+
+
+
+
